@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: zero-deploy
+  labels:
+    seq: zero-deploy
+    app: zero-deploy
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      seq: zero-pod
+  template:
+    metadata:
+      name: zero-pod
+      labels:
+        seq: zero-pod
+        app: zero-pod
+    spec:
+      containers:
+      - name: zero
+        image: nginx
+

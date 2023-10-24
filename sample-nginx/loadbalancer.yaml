@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+  labels:
+    seq: zero-svc
+    app: zero-svc
+spec:
+  type: LoadBalancer
+  selector:
+    seq: zero-pod
+  ports:
+  - port: 80
+    targetPort: 80
+
