@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: one
+  name: nginx
   labels:
     seq: one
     name: one
 spec:
   containers:
-  - name: one
+  - name: nginx
     image: nginx
     ports: 
     - containerPort: 80
